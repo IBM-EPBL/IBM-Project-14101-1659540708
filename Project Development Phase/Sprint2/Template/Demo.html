@@ -1,0 +1,102 @@
+<style>
+    .zoom{
+        padding-left: 10%;
+        background-color: palevioletred;
+    }
+    .text-responsive-h{
+        font-family: algerian;
+        font-size: 30;
+    }
+    .abcd{
+         width:48%;
+         align-items: center;
+         font-family: rockwell;
+    }
+    .ghg{
+        font-family: elephant;
+    }
+</style>
+<div class="full">
+    <div class="p-4">
+        <div class="row mb-3">
+            <div class="col-4">
+                <h2 align="center" class="text-responsive-h">
+                    University Admit Eligibility Predictor
+                </h2>
+               
+                <div class="d-flex justify-content-right">
+                </div>
+                </div>
+            <div class="col-8">
+                <div class="card p-2 ms-2 my-2"> 
+                    <div class="card-body">
+                       <!-- <h5 class="card-title pb-4">
+                            Enter the details
+                        </h5>-->
+                        <img class="zoom" src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/05/0_QkjQ-R3jwAdJ3UMK.jpg?auto=format&q=60&fit=max&w=930" width="1200" height="600">
+                        <h3 class="ghg">Enter the details</h3>
+                        <form action="{{url_for('controller')}}" method="post" id="theForm">
+                            <div class="abcd">
+                                <label for="gre" class="col-lg-2 col-form-label">Enter your GRE Score:</label>
+                                <div class="col-lg-10">    
+                                    <input type="number" class="form-control" id="gre" name="gre" min="260" max="340" required>
+                                </div>
+                            </div>
+                            <div class="abcd">
+                                <label for="toefl" class="col-lg-2 col-form-label">Enter your TOEFL Score:</label>
+                                <div class="col-lg-10">    
+                                    <input type="number" class="form-control" id="toefl" name="toefl" min="50" max="120" required>
+                                </div>
+                            </div>
+                            <div class="abcd">
+                                <label for="university_rating" class="col-lg-2 col-form-label">Enter your University Rating:</label>
+                                <div class="col-lg-10">    
+                                    <input type="number" class="form-control" id="university_rating" step="0.01" name="university_rating" min="1" max="5" required>
+                                </div>
+                            </div>
+                            <div class="abcd">
+                                <label for="sop" class="col-lg-2 col-form-label">No. of SOP:</label>
+                                <div class="col-lg-10">    
+                                    <input type="number" class="form-control" id="sop" name="sop" step="0.01" min="1" max="4" required>
+                                </div>
+                            </div>
+                            <div class="abcd">
+                                <label for="lor" class="col-lg-2 col-form-label">No. of LOR:</label>
+                                <div class="col-lg-10">    
+                                    <input type="number" class="form-control" id="lor" name="lor" step="0.01" min="1" max="4" required>
+                                </div>
+                            </div>
+                            <div class="abcd">
+                                <label for="cgpa" class="col-lg-2 col-form-label">Enter your CGPA:</label>
+                                <div class="col-lg-10">    
+                                    <input type="number" class="form-control" id="cgpa" name="cgpa" step="0.01" min="5" max="10" required>
+                                </div>
+                            </div>
+                            <fieldset class="abcd">
+                                <legend class="col-form-label col-sm-2 pt-0">Research:</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="yes_no_radio" id="gridRadios1" value="1">
+                                        <label class="form-check-label" for="yes_no_radio">
+                                        Yes
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="yes_no_radio" id="gridRadios2" value="0" checked>
+                                        <label class="form-check-label" for="yes_no_radio">
+                                        No
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="row lg-3">
+                                <div class="col-lg-2 mb-2 me-3">
+                                    <button type="submit" class="btn-btn-primary" id="button">Predict</button>
+                                </div>
+                                </div>
+                        </form>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
